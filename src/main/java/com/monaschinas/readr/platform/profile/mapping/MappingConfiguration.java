@@ -9,4 +9,9 @@ public class MappingConfiguration {
   public RoleMapper roleMapper() {
     return new RoleMapper();
   }
+
+  @Bean
+  public ProfileMapper profileMapper() {
+    return new ProfileMapper();
+  }
 }
