@@ -58,7 +58,7 @@ public class RoleServiceImpl implements RoleService {
   }
 
   @Override
-  public Role update(Long id, Role role) {
+  public Role update(Long roleId, Role role) {
     Set<ConstraintViolation<Role>> violations = validator.validate(role);
 
     if (!violations.isEmpty())
@@ -69,9 +69,9 @@ public class RoleServiceImpl implements RoleService {
     if (roleWithName.isPresent() && !roleWithName.get().getId().equals(role.getId()))
       throw new ResourceValidationException(ENTITY, "A role with the same name already exists");
 
-    return roleRepository.findById(id)
+    return roleRepository.findById(roleId)
       .map(roleToUpdate -> roleRepository.save(roleToUpdate.withName(role.getName())))
-      .orElseThrow(() -> new ResourceNotFoundException(ENTITY, id));
+      .orElseThrow(() -> new ResourceNotFoundException(ENTITY, roleId));
   }
 
   @Override

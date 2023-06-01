@@ -12,6 +12,6 @@ public interface RoleService {
   Page<Role> getAll(Pageable pageable);
   Role getById(Long roleId);
   Role create(Role role);
-  Role update(Long id, Role role);
+  Role update(Long roleId, Role role);
   ResponseEntity<?> delete(Long roleId);
 }
