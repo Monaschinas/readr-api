@@ -67,8 +67,8 @@ public class GenreServiceImpl implements GenreService {
             throw new ResourceValidationException(ENTITY,violations);
         }
         Optional<Genre> genreWithName = genreRepository.findByName(genre.getName());
-        if(genreRepository.findByName(genre.getName()).isPresent()) {
-            throw new ResourceValidationException(ENTITY, "A genre with the same name already exists");
+        if(genreWithName.isPresent() && !genreWithName.get().getId().equals(genre.getId())) {
+            throw new ResourceValidationException(ENTITY, "A language with the same name already exists");
         }
         return genreRepository.findById(genreId)
                 .map(genreToUpdate -> genreRepository.save(genreToUpdate
