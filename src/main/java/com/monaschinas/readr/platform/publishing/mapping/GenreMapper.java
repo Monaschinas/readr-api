@@ -3,6 +3,7 @@ package com.monaschinas.readr.platform.publishing.mapping;
 import com.monaschinas.readr.platform.publishing.domain.model.Genre;
 import com.monaschinas.readr.platform.publishing.resource.CreateGenreResource;
 import com.monaschinas.readr.platform.publishing.resource.GenreResource;
+import com.monaschinas.readr.platform.publishing.resource.UpdateGenreResource;
 import com.monaschinas.readr.platform.shared.mapping.EnhancedModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -23,4 +24,5 @@ public class GenreMapper implements Serializable {
     }
 
     public Genre toModel(CreateGenreResource resource) { return mapper.map(resource, Genre.class); }
+    public Genre toModel(UpdateGenreResource resource) { return mapper.map(resource, Genre.class); }
 }
