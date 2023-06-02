@@ -7,4 +7,7 @@ import org.springframework.context.annotation.Configuration;
 public class MappingConfiguration {
     @Bean
     public GenreMapper genreMapper(){ return new GenreMapper(); }
+
+    @Bean
+    public LanguageMapper languageMapper(){ return new LanguageMapper(); }
 }
