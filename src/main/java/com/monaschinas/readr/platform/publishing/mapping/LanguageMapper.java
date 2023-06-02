@@ -19,7 +19,7 @@ public class LanguageMapper implements Serializable {
 
     public LanguageResource toResource(Language model) { return mapper.map(model, LanguageResource.class); }
 
-    public Page<LanguageResource> modelListPage(List<Page> modelList, Pageable pageable){
+    public Page<LanguageResource> modelListPage(List<Language> modelList, Pageable pageable){
         return new PageImpl<>(mapper.mapList(modelList, LanguageResource.class), pageable, modelList.size());
     }
 
