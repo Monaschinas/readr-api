@@ -5,7 +5,6 @@ import com.monaschinas.readr.platform.publishing.mapping.LanguageMapper;
 import com.monaschinas.readr.platform.publishing.resource.CreateLanguageResource;
 import com.monaschinas.readr.platform.publishing.resource.LanguageResource;
 import com.monaschinas.readr.platform.publishing.resource.UpdateLanguageResource;
-import org.hibernate.sql.Update;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
