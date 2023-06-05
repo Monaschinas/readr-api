@@ -33,7 +33,7 @@ public class ProfileController {
   }
 
   @PostMapping
-  public ResponseEntity<ProfileResource> createProfile(CreateProfileResource resource) {
+  public ResponseEntity<ProfileResource> createProfile(@RequestBody CreateProfileResource resource) {
     return new ResponseEntity<>(mapper.toResource(profileService.create(mapper.toModel(resource))), HttpStatus.CREATED);
   }
 
