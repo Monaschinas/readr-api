@@ -20,4 +20,8 @@ public class CreateProfileResource {
   @NotBlank
   @Size(max = 32)
   private String lastName;
+
+  @NotNull
+  @NotBlank
+  private Long roleId;
 }
