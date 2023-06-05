@@ -10,4 +10,10 @@ public class MappingConfiguration {
 
     @Bean
     public LanguageMapper languageMapper(){ return new LanguageMapper(); }
+
+    @Bean
+    public SagaMapper sagaMapper(){ return new SagaMapper(); }
+
+    @Bean
+    public SagaStatusMapper sagaStatusMapper(){ return new SagaStatusMapper(); }
 }
