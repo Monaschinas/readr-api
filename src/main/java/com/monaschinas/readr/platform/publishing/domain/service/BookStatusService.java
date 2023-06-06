@@ -7,7 +7,7 @@ import org.springframework.http.ResponseEntity;
 
 import java.util.List;
 
-public interface BookStatutusService {
+public interface BookStatusService {
     List<BookStatus> getAll();
     Page<BookStatus> getAll(Pageable pageable);
     BookStatus getById(Long bookStatusId);
