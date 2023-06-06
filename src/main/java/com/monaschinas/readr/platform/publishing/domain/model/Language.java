@@ -6,6 +6,8 @@ import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 import lombok.*;
 
+import java.util.Set;
+
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
@@ -27,4 +29,9 @@ public class Language {
     @NotBlank
     @Size(max = 4)
     private String abbreviation;
+
+    // Relationships
+
+    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER, mappedBy = "language")
+    private Set<Saga> sagas;
 }
