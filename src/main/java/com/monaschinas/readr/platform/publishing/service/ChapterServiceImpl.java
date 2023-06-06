@@ -75,7 +75,10 @@ public class ChapterServiceImpl implements ChapterService {
         if(chapterWithTitle.isPresent() && !chapterWithTitle.get().getId().equals(chapter.getId())) {
             throw new ResourceValidationException(ENTITY, "A chapter with the same name already exists");
         }
-        return null;
+        return chapterRepository.findById(chapterId)
+                .map(chapterToUpdate -> chapterRepository.save(chapterToUpdate
+                        .withTitle(chapter.getTitle())))
+                .orElseThrow(() -> new ResourceNotFoundException(ENTITY, chapterId));
     }
 
     @Override
