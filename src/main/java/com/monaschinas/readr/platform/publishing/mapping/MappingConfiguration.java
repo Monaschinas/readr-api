@@ -19,4 +19,7 @@ public class MappingConfiguration {
 
     @Bean
     public BookStatusMapper bookStatusMapper() { return new BookStatusMapper(); }
+
+    @Bean
+    public BookMapper bookMapper() { return new BookMapper(); }
 }
