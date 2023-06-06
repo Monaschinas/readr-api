@@ -20,4 +20,12 @@ public class CreateSagaResource {
     @NotBlank
     @Size(max = 96)
     private String synopsis;
+
+    @NotNull
+    @NotBlank
+    private Long sagaStatusId;
+
+    @NotNull
+    @NotBlank
+    private Long languageId;
 }
