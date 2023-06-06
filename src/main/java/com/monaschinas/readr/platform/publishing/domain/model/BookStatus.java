@@ -21,5 +21,5 @@ public class BookStatus {
     @NotNull
     @NotBlank
     @Size(max = 16)
-    private String name;
+    private String title;
 }

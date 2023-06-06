@@ -51,5 +51,5 @@ public class Book {
     @JsonIgnore
     private BookStatus bookStatusId;
 
-    private Long profileId;
+    private Long authorId;
 }
