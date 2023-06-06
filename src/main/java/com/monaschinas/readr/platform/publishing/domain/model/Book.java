@@ -1,7 +1,6 @@
 package com.monaschinas.readr.platform.publishing.domain.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.monaschinas.readr.platform.profile.domain.model.Profile;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
@@ -25,7 +24,7 @@ public class Book {
     @NotNull
     @NotBlank
     @Size(max = 64)
-    private String name;
+    private String title;
 
     @NotNull
     @NotBlank
@@ -52,8 +51,5 @@ public class Book {
     @JsonIgnore
     private BookStatus bookStatusId;
 
-    @ManyToOne
-    @JoinColumn(name = "author_id", nullable = false)
-    @JsonIgnore
-    private Profile profileId;
+    private Long profileId;
 }
