@@ -9,6 +9,7 @@ import jakarta.validation.ConstraintViolation;
 import jakarta.validation.Validator;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -70,6 +71,15 @@ public class BookStatusServiceImpl implements BookStatusService {
                 .map(bookToUpdate -> bookStatusRepository.save(bookToUpdate
                         .withTitle(bookStatus.getTitle())))
                 .orElseThrow(() -> new ResourceNotFoundException(ENTITY, bookStatusId));
+    }
 
+    @Override
+    public ResponseEntity<?> delete (Long bookStatusId){
+        return bookStatusRepository.findById(bookStatusId)
+                .map(bookStatus -> {
+                    bookStatusRepository.delete(bookStatus);
+                    return ResponseEntity.ok().build();
+                })
+                .orElseThrow(() -> new ResourceNotFoundException(ENTITY, bookStatusId));
     }
 }
