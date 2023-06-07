@@ -27,4 +27,8 @@ public class Chapter {
     @NotBlank
     @Size(max = 64)
     private String document_content_url;
+
+    @NotNull
+    @NotBlank
+    private Long bookId;
 }
