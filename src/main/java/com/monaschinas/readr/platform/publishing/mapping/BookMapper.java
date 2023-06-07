@@ -2,7 +2,7 @@ package com.monaschinas.readr.platform.publishing.mapping;
 
 import com.monaschinas.readr.platform.publishing.domain.model.Book;
 import com.monaschinas.readr.platform.publishing.resource.BookResource;
-import com.monaschinas.readr.platform.publishing.resource.CreateBookStatusResource;
+import com.monaschinas.readr.platform.publishing.resource.CreateBookResource;
 import com.monaschinas.readr.platform.publishing.resource.UpdateBookResource;
 import com.monaschinas.readr.platform.shared.mapping.EnhancedModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,7 +22,7 @@ public class BookMapper {
         return new PageImpl<>(mapper.mapList(modelList, BookResource.class), pageable, modelList.size());
     }
 
-    public Book toModel(CreateBookStatusResource resource){ return mapper.map(resource, Book.class); }
+    public Book toModel(CreateBookResource resource){ return mapper.map(resource, Book.class); }
 
     public Book toModel(UpdateBookResource resource){ return mapper.map(resource, Book.class); }
 }
