@@ -48,7 +48,7 @@ public class BookStatusServiceImpl implements BookStatusService {
         if (!violations.isEmpty()){
             throw new ResourceValidationException(ENTITY, violations);
         }
-        if (bookStatusRepository.findByName(bookStatus.getTitle()).isPresent()){
+        if (bookStatusRepository.findByTitle(bookStatus.getTitle()).isPresent()){
             throw new ResourceValidationException(ENTITY, "A book status with the same name already exists");
         }
 
@@ -62,7 +62,7 @@ public class BookStatusServiceImpl implements BookStatusService {
         if(!violations.isEmpty()){
             throw new ResourceValidationException(ENTITY,violations);
         }
-        Optional<BookStatus> bookStatusWithName = bookStatusRepository.findByName(bookStatus.getTitle());
+        Optional<BookStatus> bookStatusWithName = bookStatusRepository.findByTitle(bookStatus.getTitle());
         if (bookStatusWithName.isPresent() && !bookStatusWithName.get().getId().equals(bookStatus.getId())){
             throw new ResourceValidationException(ENTITY, "A book status with the same name already exists");
         }
