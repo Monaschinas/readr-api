@@ -22,4 +22,7 @@ public class MappingConfiguration {
 
     @Bean
     public BookMapper bookMapper() { return new BookMapper(); }
+
+    @Bean
+    public ChapterMapper chapterMapper(){ return new ChapterMapper(); }
 }

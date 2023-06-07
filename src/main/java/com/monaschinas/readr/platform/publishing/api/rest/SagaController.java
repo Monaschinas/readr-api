@@ -7,6 +7,7 @@ import com.monaschinas.readr.platform.publishing.resource.SagaResource;
 import com.monaschinas.readr.platform.publishing.resource.UpdateSagaResource;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -31,8 +32,8 @@ public class SagaController {
     }
 
     @PostMapping
-    public SagaResource createSaga(@RequestBody CreateSagaResource resource){
-        return mapper.toResource(sagaService.create(mapper.toModel(resource)));
+    public ResponseEntity<SagaResource> createSaga(@RequestBody CreateSagaResource resource){
+        return new ResponseEntity<>(mapper.toResource(sagaService.create(mapper.toModel(resource))), HttpStatus.CREATED);
     }
 
     @PutMapping({"sagaId"})

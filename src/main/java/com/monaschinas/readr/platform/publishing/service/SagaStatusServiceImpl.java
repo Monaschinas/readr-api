@@ -48,9 +48,6 @@ public class SagaStatusServiceImpl implements SagaStatusService {
         if(!violations.isEmpty()){
             throw new ResourceValidationException(ENTITY,violations);
         }
-        if(sagaStatusRepository.findByName(sagaStatus.getName()).isPresent()) {
-            throw new ResourceValidationException(ENTITY, "A genre with the same name already exists");
-        }
 
         return sagaStatusRepository.save(sagaStatus);
     }

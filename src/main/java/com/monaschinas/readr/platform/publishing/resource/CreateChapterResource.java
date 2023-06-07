@@ -10,22 +10,18 @@ import lombok.*;
 @With
 @NoArgsConstructor
 @AllArgsConstructor
-public class CreateSagaResource {
+public class CreateChapterResource {
     @NotNull
     @NotBlank
-    @Size(max = 64)
+    @Size(max = 24)
     private String title;
 
     @NotNull
     @NotBlank
-    @Size(max = 96)
-    private String synopsis;
+    @Size(max = 64)
+    private String document_content_url;
 
     @NotNull
     @NotBlank
-    private Long sagaStatusId;
-
-    @NotNull
-    @NotBlank
-    private Long languageId;
+    private Long bookId;
 }

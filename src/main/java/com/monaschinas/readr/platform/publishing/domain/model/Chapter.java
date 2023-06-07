@@ -6,32 +6,25 @@ import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 import lombok.*;
 
-import java.util.Set;
-
-@NoArgsConstructor
 @AllArgsConstructor
+@NoArgsConstructor
 @Getter
 @Setter
 @With
 @Entity
-@Table(name = "languages")
-public class Language {
+@Table(name = "chapters")
+public class Chapter {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @NotNull
     @NotBlank
-    @Size(max = 12)
-    private String name;
+    @Size(max = 24)
+    private String title;
 
     @NotNull
     @NotBlank
-    @Size(max = 4)
-    private String abbreviation;
-
-    // Relationships
-
-    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER, mappedBy = "language")
-    private Set<Saga> sagas;
+    @Size(max = 64)
+    private String document_content_url;
 }
