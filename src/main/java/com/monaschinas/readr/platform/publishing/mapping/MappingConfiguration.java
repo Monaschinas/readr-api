@@ -18,5 +18,11 @@ public class MappingConfiguration {
     public SagaStatusMapper sagaStatusMapper(){ return new SagaStatusMapper(); }
 
     @Bean
+    public BookStatusMapper bookStatusMapper() { return new BookStatusMapper(); }
+
+    @Bean
+    public BookMapper bookMapper() { return new BookMapper(); }
+
+    @Bean
     public ChapterMapper chapterMapper(){ return new ChapterMapper(); }
 }
