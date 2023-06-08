@@ -1,4 +1,4 @@
-package com.monaschinas.readr.platform.profile.domain.model;
+package com.monaschinas.readr.platform.profiling.domain.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;

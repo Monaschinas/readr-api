@@ -1,17 +1,17 @@
-package com.monaschinas.readr.platform.profile.api.rest;
+package com.monaschinas.readr.platform.profiling.api.rest;
 
-import com.monaschinas.readr.platform.profile.domain.service.RoleService;
-import com.monaschinas.readr.platform.profile.mapping.RoleMapper;
-import com.monaschinas.readr.platform.profile.resource.CreateRoleResource;
-import com.monaschinas.readr.platform.profile.resource.RoleResource;
-import com.monaschinas.readr.platform.profile.resource.UpdateRoleResource;
+import com.monaschinas.readr.platform.profiling.domain.service.RoleService;
+import com.monaschinas.readr.platform.profiling.mapping.RoleMapper;
+import com.monaschinas.readr.platform.profiling.resource.CreateRoleResource;
+import com.monaschinas.readr.platform.profiling.resource.RoleResource;
+import com.monaschinas.readr.platform.profiling.resource.UpdateRoleResource;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping(value = "/api/v1/roles", produces = "application/json")
+@RequestMapping(value = "/api/v1/profiling/roles", produces = "application/json")
 public class RoleController {
   private final RoleService roleService;
   private final RoleMapper mapper;

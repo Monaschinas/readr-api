@@ -1,6 +1,6 @@
-package com.monaschinas.readr.platform.profile.domain.service;
+package com.monaschinas.readr.platform.profiling.domain.service;
 
-import com.monaschinas.readr.platform.profile.domain.model.Role;
+import com.monaschinas.readr.platform.profiling.domain.model.Role;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;

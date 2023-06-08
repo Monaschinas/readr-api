@@ -1,10 +1,10 @@
-package com.monaschinas.readr.platform.profile.api.rest;
+package com.monaschinas.readr.platform.profiling.api.rest;
 
-import com.monaschinas.readr.platform.profile.domain.service.ProfileService;
-import com.monaschinas.readr.platform.profile.mapping.ProfileMapper;
-import com.monaschinas.readr.platform.profile.resource.CreateProfileResource;
-import com.monaschinas.readr.platform.profile.resource.ProfileResource;
-import com.monaschinas.readr.platform.profile.resource.UpdateProfileResource;
+import com.monaschinas.readr.platform.profiling.domain.service.ProfileService;
+import com.monaschinas.readr.platform.profiling.mapping.ProfileMapper;
+import com.monaschinas.readr.platform.profiling.resource.CreateProfileResource;
+import com.monaschinas.readr.platform.profiling.resource.ProfileResource;
+import com.monaschinas.readr.platform.profiling.resource.UpdateProfileResource;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
@@ -12,7 +12,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping(value = "/api/v1/profiles", produces = "application/json")
+@RequestMapping(value = "/api/v1/profiling/profiles", produces = "application/json")
 public class ProfileController {
   private final ProfileService profileService;
   private final ProfileMapper mapper;

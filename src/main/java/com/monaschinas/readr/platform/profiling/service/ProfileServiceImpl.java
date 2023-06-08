@@ -1,8 +1,8 @@
-package com.monaschinas.readr.platform.profile.service;
+package com.monaschinas.readr.platform.profiling.service;
 
-import com.monaschinas.readr.platform.profile.domain.model.Profile;
-import com.monaschinas.readr.platform.profile.domain.persistence.ProfileRepository;
-import com.monaschinas.readr.platform.profile.domain.service.ProfileService;
+import com.monaschinas.readr.platform.profiling.domain.model.Profile;
+import com.monaschinas.readr.platform.profiling.domain.persistence.ProfileRepository;
+import com.monaschinas.readr.platform.profiling.domain.service.ProfileService;
 import com.monaschinas.readr.platform.shared.exception.ResourceNotFoundException;
 import com.monaschinas.readr.platform.shared.exception.ResourceValidationException;
 import jakarta.validation.ConstraintViolation;

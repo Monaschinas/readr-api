@@ -1,16 +1,16 @@
-package com.monaschinas.readr.platform.profile.resource;
+package com.monaschinas.readr.platform.profiling.resource;
 
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
-import lombok.*;
+import lombok.Getter;
+import lombok.Setter;
 
 @Getter
 @Setter
-@With
-@NoArgsConstructor
-@AllArgsConstructor
-public class CreateProfileResource {
+public class UpdateProfileResource {
+  private Long id;
+
   @NotNull
   @NotBlank
   @Size(max = 32)
@@ -20,8 +20,4 @@ public class CreateProfileResource {
   @NotBlank
   @Size(max = 32)
   private String lastName;
-
-  @NotNull
-  @NotBlank
-  private Long roleId;
 }

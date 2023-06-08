@@ -1,4 +1,4 @@
-package com.monaschinas.readr.platform.profile.domain.model;
+package com.monaschinas.readr.platform.profiling.domain.model;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;

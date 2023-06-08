@@ -1,6 +1,6 @@
-package com.monaschinas.readr.platform.profile.domain.persistence;
+package com.monaschinas.readr.platform.profiling.domain.persistence;
 
-import com.monaschinas.readr.platform.profile.domain.model.Role;
+import com.monaschinas.readr.platform.profiling.domain.model.Role;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
