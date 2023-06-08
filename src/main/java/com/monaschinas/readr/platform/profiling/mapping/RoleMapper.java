@@ -1,9 +1,9 @@
-package com.monaschinas.readr.platform.profile.mapping;
+package com.monaschinas.readr.platform.profiling.mapping;
 
-import com.monaschinas.readr.platform.profile.domain.model.Role;
-import com.monaschinas.readr.platform.profile.resource.CreateRoleResource;
-import com.monaschinas.readr.platform.profile.resource.RoleResource;
-import com.monaschinas.readr.platform.profile.resource.UpdateRoleResource;
+import com.monaschinas.readr.platform.profiling.domain.model.Role;
+import com.monaschinas.readr.platform.profiling.resource.CreateRoleResource;
+import com.monaschinas.readr.platform.profiling.resource.RoleResource;
+import com.monaschinas.readr.platform.profiling.resource.UpdateRoleResource;
 import com.monaschinas.readr.platform.shared.mapping.EnhancedModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;

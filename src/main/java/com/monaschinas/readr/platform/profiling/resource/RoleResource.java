@@ -1,4 +1,4 @@
-package com.monaschinas.readr.platform.profile.resource;
+package com.monaschinas.readr.platform.profiling.resource;
 
 import lombok.*;
 

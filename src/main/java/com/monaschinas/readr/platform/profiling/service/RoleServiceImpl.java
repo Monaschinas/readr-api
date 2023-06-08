@@ -1,8 +1,8 @@
-package com.monaschinas.readr.platform.profile.service;
+package com.monaschinas.readr.platform.profiling.service;
 
-import com.monaschinas.readr.platform.profile.domain.model.Role;
-import com.monaschinas.readr.platform.profile.domain.persistence.RoleRepository;
-import com.monaschinas.readr.platform.profile.domain.service.RoleService;
+import com.monaschinas.readr.platform.profiling.domain.model.Role;
+import com.monaschinas.readr.platform.profiling.domain.persistence.RoleRepository;
+import com.monaschinas.readr.platform.profiling.domain.service.RoleService;
 import com.monaschinas.readr.platform.shared.exception.ResourceNotFoundException;
 import com.monaschinas.readr.platform.shared.exception.ResourceValidationException;
 import jakarta.validation.ConstraintViolation;

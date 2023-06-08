@@ -1,4 +1,4 @@
-package com.monaschinas.readr.platform.profile.mapping;
+package com.monaschinas.readr.platform.profiling.mapping;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

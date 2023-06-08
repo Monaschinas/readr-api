@@ -1,9 +1,9 @@
-package com.monaschinas.readr.platform.profile.mapping;
+package com.monaschinas.readr.platform.profiling.mapping;
 
-import com.monaschinas.readr.platform.profile.domain.model.Profile;
-import com.monaschinas.readr.platform.profile.resource.CreateProfileResource;
-import com.monaschinas.readr.platform.profile.resource.ProfileResource;
-import com.monaschinas.readr.platform.profile.resource.UpdateProfileResource;
+import com.monaschinas.readr.platform.profiling.domain.model.Profile;
+import com.monaschinas.readr.platform.profiling.resource.CreateProfileResource;
+import com.monaschinas.readr.platform.profiling.resource.ProfileResource;
+import com.monaschinas.readr.platform.profiling.resource.UpdateProfileResource;
 import com.monaschinas.readr.platform.shared.mapping.EnhancedModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;

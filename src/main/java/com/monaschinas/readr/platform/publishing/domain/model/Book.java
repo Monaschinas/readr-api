@@ -1,7 +1,6 @@
 package com.monaschinas.readr.platform.publishing.domain.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.monaschinas.readr.platform.profile.domain.model.Profile;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
