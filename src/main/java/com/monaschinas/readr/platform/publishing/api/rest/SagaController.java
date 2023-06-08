@@ -12,7 +12,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping(value = "/api/v1/sagas", produces = "application/json")
+@RequestMapping(value = "/api/v1/publishing/sagas", produces = "application/json")
 public class SagaController {
     private final SagaService sagaService;
     private final SagaMapper mapper;
