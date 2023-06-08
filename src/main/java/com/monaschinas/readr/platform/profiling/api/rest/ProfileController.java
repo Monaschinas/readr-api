@@ -12,7 +12,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping(value = "/api/v1/profiles", produces = "application/json")
+@RequestMapping(value = "/api/v1/profiling/profiles", produces = "application/json")
 public class ProfileController {
   private final ProfileService profileService;
   private final ProfileMapper mapper;
