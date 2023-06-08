@@ -23,11 +23,13 @@ public class Language {
     @NotNull
     @NotBlank
     @Size(max = 12)
+    @Column(unique = true)
     private String name;
 
     @NotNull
     @NotBlank
     @Size(max = 4)
+    @Column(unique = true)
     private String abbreviation;
 
     // Relationships
