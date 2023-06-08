@@ -22,5 +22,6 @@ public class Genre {
     @NotNull
     @NotBlank
     @Size(max = 24)
+    @Column(unique = true)
     private String name;
 }
