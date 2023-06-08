@@ -1,5 +1,6 @@
 package com.monaschinas.readr.platform.publishing.domain.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
@@ -26,9 +27,10 @@ public class Chapter {
     @NotNull
     @NotBlank
     @Size(max = 64)
-    private String document_content_url;
+    private String documentContentUrl;
 
-    @NotNull
-    @NotBlank
-    private Long bookId;
+    @ManyToOne(fetch = FetchType.EAGER, optional = false)
+    @JoinColumn(name = "book_id", nullable = false)
+    @JsonIgnore
+    private Book book;
 }

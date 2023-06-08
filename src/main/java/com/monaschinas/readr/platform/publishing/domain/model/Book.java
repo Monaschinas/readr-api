@@ -1,6 +1,7 @@
 package com.monaschinas.readr.platform.publishing.domain.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.monaschinas.readr.platform.profile.domain.model.Profile;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
@@ -8,6 +9,7 @@ import jakarta.validation.constraints.Size;
 import lombok.*;
 
 import java.util.Date;
+import java.util.Set;
 
 @NoArgsConstructor
 @AllArgsConstructor
@@ -33,7 +35,7 @@ public class Book {
 
     @NotNull
     @NotBlank
-    private Date published_at;
+    private Date publishedAt;
 
     //Relationships
     @ManyToOne(fetch = FetchType.EAGER, optional = false)
@@ -47,9 +49,12 @@ public class Book {
     private Saga sagaId;
 
     @ManyToOne(fetch = FetchType.EAGER, optional = false)
-    @JoinColumn(name = "book_id", nullable = false)
+    @JoinColumn(name = "book_status_id", nullable = false)
     @JsonIgnore
     private BookStatus bookStatusId;
+
+    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER, mappedBy = "book")
+    private Set<Chapter> chapters;
 
     private Long authorId;
 }
