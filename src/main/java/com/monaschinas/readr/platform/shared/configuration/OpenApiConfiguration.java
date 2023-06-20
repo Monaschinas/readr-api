@@ -4,17 +4,19 @@ import io.swagger.v3.oas.models.OpenAPI;
 import io.swagger.v3.oas.models.info.Contact;
 import io.swagger.v3.oas.models.info.Info;
 import io.swagger.v3.oas.models.info.License;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
 public class OpenApiConfiguration {
-  public OpenAPI customOpenApi(String applicationDescription, String applicationVersion) {
+    @Bean
+  public OpenAPI customOpenApi() {
     return new OpenAPI()
       .info(
         new Info()
           .title("Monaschinas Readr API")
-          .version(applicationVersion)
-          .description(applicationDescription)
+          .version("1.1")
+          .description("Readr")
           .termsOfService("https://readr-landing.netlify.app/terms-of-use/")
           .license(
             new License()
