@@ -8,6 +8,7 @@ import org.springframework.http.ResponseEntity;
 import java.util.List;
 
 public interface RoleService {
+  void seed();
   List<Role> getAll();
   Page<Role> getAll(Pageable pageable);
   Role getById(Long roleId);
