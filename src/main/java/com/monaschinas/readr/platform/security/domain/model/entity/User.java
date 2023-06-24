@@ -27,4 +27,8 @@ public class User {
   @NotBlank
   @Size(max = 124)
   private String password;
+
+  @NotNull
+  @Column(unique = true)
+  private Long profileId;
 }

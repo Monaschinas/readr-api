@@ -9,6 +9,7 @@ import java.util.List;
 
 public interface ProfileService {
   List<Profile> getAll();
+  List<Profile> getAllByUserId(Long userId);
   Page<Profile> getAll(Pageable pageable);
   Profile getById(Long profileId);
   Profile create(Profile profile);
