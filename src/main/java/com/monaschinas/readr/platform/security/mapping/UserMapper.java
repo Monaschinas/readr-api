@@ -1,6 +1,7 @@
 package com.monaschinas.readr.platform.security.mapping;
 
 import com.monaschinas.readr.platform.security.domain.model.entity.User;
+import com.monaschinas.readr.platform.security.domain.service.communication.RegisterRequest;
 import com.monaschinas.readr.platform.security.resource.UserResource;
 import com.monaschinas.readr.platform.shared.mapping.EnhancedModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,6 +18,10 @@ public class UserMapper implements Serializable {
 
   public UserResource toResource(User model) {
     return mapper.map(model, UserResource.class);
+  }
+
+  public User toModel(RegisterRequest model) {
+    return mapper.map(model, User.class);
   }
 
   public Page<UserResource> modeListPage(List<User> modelList, Pageable pageable) {

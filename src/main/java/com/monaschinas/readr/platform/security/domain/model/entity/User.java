@@ -20,6 +20,12 @@ public class User {
 
   @NotBlank
   @NotNull
+  @Size(max = 24)
+  @Column(unique = true)
+  public String username;
+
+  @NotBlank
+  @NotNull
   @Size(max = 64)
   @Column(unique = true)
   private String email;

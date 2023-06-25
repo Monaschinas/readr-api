@@ -5,6 +5,7 @@ import com.monaschinas.readr.platform.profiling.domain.model.Role;
 import com.monaschinas.readr.platform.security.domain.model.entity.User;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
+/*
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -62,10 +63,11 @@ public class UserDetailsImpl implements UserDetails {
 
     return new UserDetailsImpl(
       user.getId(),
-      user.getEmail(),
+      user.getUsername(),
       user.getEmail(),
       user.getPassword(),
       authorities
     );
   }
 }
+*/

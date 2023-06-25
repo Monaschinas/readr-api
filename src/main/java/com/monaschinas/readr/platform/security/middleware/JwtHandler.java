@@ -1,5 +1,5 @@
 package com.monaschinas.readr.platform.security.middleware;
-
+/*
 import io.jsonwebtoken.*;
 import io.jsonwebtoken.security.Keys;
 import io.jsonwebtoken.security.SignatureException;
@@ -89,3 +89,4 @@ public class JwtHandler {
     return false;
   }
 }
+*/
