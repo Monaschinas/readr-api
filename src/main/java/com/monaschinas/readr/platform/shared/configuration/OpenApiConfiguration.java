@@ -9,13 +9,13 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 public class OpenApiConfiguration {
-    @Bean
+  @Bean
   public OpenAPI customOpenApi() {
     return new OpenAPI()
       .info(
         new Info()
           .title("Monaschinas Readr API")
-          .version("1.1")
+          .version("1.0")
           .description("Readr")
           .termsOfService("https://readr-landing.netlify.app/terms-of-use/")
           .license(
