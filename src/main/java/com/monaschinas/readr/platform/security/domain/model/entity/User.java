@@ -2,6 +2,7 @@ package com.monaschinas.readr.platform.security.domain.model.entity;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 import lombok.*;
@@ -35,6 +36,18 @@ public class User {
   private String password;
 
   @NotNull
-  @Column(unique = true)
+  @NotBlank
+  public String firstName;
+
+  @NotNull
+  @NotBlank
+  public String lastName;
+
+  @NotNull
+  @NotBlank
+  public String urlPhoto;
+
+  public boolean isAuthor;
+
   private Long profileId;
 }

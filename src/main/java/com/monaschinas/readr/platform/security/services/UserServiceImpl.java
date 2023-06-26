@@ -51,7 +51,11 @@ public class UserServiceImpl implements UserService {
       .withId(existingUser.getId())
       .withUsername(existingUser.getUsername())
       .withEmail(existingUser.getEmail())
-      .withToken("HereGoesTheToken:D");
+      .withToken("HereGoesTheToken:D")
+      .withFirstName(existingUser.getFirstName())
+      .withLastName(existingUser.getLastName())
+      .withUrlPhoto(existingUser.getUrlPhoto())
+      .withAuthor(existingUser.isAuthor());
 
     //Authentication authentication = new UsernamePasswordAuthenticationToken(existingUser, null, null);
 
@@ -69,6 +73,7 @@ public class UserServiceImpl implements UserService {
     }
 
     User user = mapper.toModel(model);
+    user.setProfileId(404L);
     user.setPassword(passwordHashingService.getHash(model.getPassword()));
 
     Set<ConstraintViolation<User>> violations = validator.validate(user);
