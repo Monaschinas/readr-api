@@ -23,10 +23,8 @@ public class UserController {
     try {
       AuthenticateResponse response = userService.authenticate(request);
       return ResponseEntity.ok(response);
-    } catch (AppException e) {
-      return ResponseEntity.status(HttpStatus.UNAUTHORIZED).build();
     } catch (Exception e) {
-      return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
+      return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(e.getMessage());
     }
   }
 
