@@ -12,6 +12,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
+import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
 import java.util.Set;
@@ -19,6 +20,7 @@ import java.util.Set;
 @Service
 public class RoleServiceImpl implements RoleService {
   private static final String ENTITY = "Role";
+  private static final String[] DEFAULT_ROLES = { "Author", "Reader" };
 
   private final RoleRepository roleRepository;
   private final Validator validator;
@@ -26,6 +28,16 @@ public class RoleServiceImpl implements RoleService {
   public RoleServiceImpl(RoleRepository roleRepository, Validator validator) {
     this.roleRepository = roleRepository;
     this.validator = validator;
+  }
+
+  @Override
+  public void seed() {
+    Arrays.stream(DEFAULT_ROLES)
+      .forEach(name -> {
+        if (!roleRepository.existsByName(name)) {
+          roleRepository.save(new Role().withName(name));
+        }
+      });
   }
 
   @Override

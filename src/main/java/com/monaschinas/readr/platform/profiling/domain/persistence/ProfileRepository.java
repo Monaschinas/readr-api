@@ -11,5 +11,6 @@ import java.util.List;
 @Repository
 public interface ProfileRepository extends JpaRepository<Profile, Long> {
   List<Profile> findByRoleId(Long roleId);
+  List<Profile> findByUserId(Long userId);
   Page<Profile> findByRoleId(Long roleId, Pageable pageable);
 }

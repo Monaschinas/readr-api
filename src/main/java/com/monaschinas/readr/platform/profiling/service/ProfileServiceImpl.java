@@ -33,6 +33,11 @@ public class ProfileServiceImpl implements ProfileService {
   }
 
   @Override
+  public List<Profile> getAllByUserId(Long userId) {
+    return profileRepository.findByUserId(userId);
+  }
+
+  @Override
   public Page<Profile> getAll(Pageable pageable) {
     return profileRepository.findAll(pageable);
   }

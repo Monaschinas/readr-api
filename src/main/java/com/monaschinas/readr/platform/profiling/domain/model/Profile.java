@@ -30,9 +30,12 @@ public class Profile {
   private String lastName;
 
   // Relationships
+  @NotNull
+  private Long userId;
 
   @ManyToOne(fetch = FetchType.EAGER, optional = false)
   @JoinColumn(name = "role_id", nullable = false)
   @JsonIgnore
   private Role role;
+
 }

@@ -5,9 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 public class ReadrApplication {
-
-    public static void main(String[] args) {
-        SpringApplication.run(ReadrApplication.class, args);
-    }
-
+  public static void main(String[] args) {
+    SpringApplication.run(ReadrApplication.class, args);
+  }
 }
